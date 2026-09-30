@@ -1,0 +1,9 @@
+{
+  "name": "sultans-shopify-case-study",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "task1": "node --env-file=.env src/task1.js",
+    "task2": "node --env-file=.env src/task2.js"
+  }
+}
