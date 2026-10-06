@@ -6,6 +6,7 @@ Plain Node 22 with no dependencies. It uses only the Shopify Admin GraphQL API, 
 cp .env.example .env   # fill in SHOPIFY_ADMIN_TOKEN
 npm run task1          # -> data/top_50_spenders.csv
 npm run task2
+npm run task2:hold -- 300
 ```
 
 ## Task 1 – Leaderboard

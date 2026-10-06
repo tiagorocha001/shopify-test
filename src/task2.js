@@ -21,10 +21,13 @@ const { products } = await gql(`{
   }
 }`);
 
+// These take the first product, its first variant, its first location and its current stock number. 
+// It's just getting values out of the nested reply.
 const variant = products.nodes[0].variants.nodes[0];
 const level = variant.inventoryItem.inventoryLevels.nodes[0];
 const available = level.quantities[0].quantity;
 
+// restock if needed
 if (available < 1) {
   const { inventoryAdjustQuantities: r } = await gql(
     `mutation ($input: InventoryAdjustQuantitiesInput!) {
